@@ -82,4 +82,40 @@ class SolverTest extends FunSuite {
   test("testCheck05 incorrect answer C") {
     assert(!Solver.check05(List('A', 'B', 'A', 'A', 'B', 'C', 'B', 'C', 'A', 'B', 'A', 'A', 'A', 'B', 'B', 'C', 'D')))
   }
+
+  test("testCheck06 correct answer A6 > A7") {
+    assert(Solver.check06(List('E', 'B', 'A', 'D', 'A', 'B', 'C', 'A')))
+  }
+
+  test("testCheck06 correct answer A6 < A7") {
+    assert(Solver.check06(List('E', 'B', 'A', 'D', 'A', 'B', 'A', 'E')))
+  }
+
+  test("testCheck06 incorrect answer") {
+    assert(!Solver.check06(List('E', 'B', 'A', 'D', 'A', 'B', 'C', 'D')))
+  }
+
+  test("testCheck07 correct answer") {
+    assert(Solver.check07(List('E', 'B', 'A', 'E', 'A', 'B', 'E', 'B')))
+  }
+
+  test("testCheck07 incorrect answer") {
+    assert(!Solver.check07(List('E', 'B', 'A', 'E', 'A', 'B', 'E', 'A')))
+  }
+
+  test("testCheck08 correct answer") {
+    assert(Solver.check08(List('A', 'B', 'A', 'A', 'A', 'B', 'B', 'C', 'A', 'A', 'B')))
+  }
+
+  test("testCheck08 incorrect answer") {
+    assert(!Solver.check08(List('E', 'B', 'A', 'D', 'A', 'B', 'E', 'C', 'A', 'B', 'A')))
+  }
+
+  test("testCheck09 correct answer") {
+    assert(Solver.check09(List('0', '1', '2', '3', '4', '5', '6', '7', '8', 'A', '0', '1', '2', '3', '4', 'D')))
+  }
+
+  test("testCheck09 incorrect answer") {
+    assert(!Solver.check09(List('0', '1', '2', '3', '4', '5', '6', '7', '8', 'C', '0', '1', '2', '3', '4', 'B')))
+  }
 }
