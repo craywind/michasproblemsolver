@@ -10,4 +10,3 @@ findNumberOfE(List('A', 'B', 'A', 'D', 'A', 'B', 'B', 'C'), 0)
 Solver.charToNumberWithDelta('A', 0)
 
 
-
